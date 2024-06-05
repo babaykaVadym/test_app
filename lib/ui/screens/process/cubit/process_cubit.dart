@@ -65,7 +65,7 @@ class ProcessCubit extends Cubit<ProcessState> {
       emit(state.copyWith(
         loadPercent: state.loadPercent + timeLine,
       ));
-      await Future.delayed(const Duration(milliseconds: 1200));
+      await Future.delayed(const Duration(milliseconds: 200));
       final read = findPath(element);
 
       searchResultBus.add(element.copyWith(resultList: read));
