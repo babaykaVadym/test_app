@@ -21,7 +21,9 @@ class PreviewResultScreen extends StatelessWidget {
       body: SafeArea(
           child: ListView(
         children: [
-          SizedBox(
+          Container(
+            decoration: BoxDecoration(
+                border: Border.all(width: 0.5, color: Colors.grey)),
             height: MediaQuery.of(context).size.width,
             width: MediaQuery.of(context).size.width,
             child: Row(
@@ -31,10 +33,13 @@ class PreviewResultScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         for (PointMode spot in row)
-                          SizedBox(
-                            width: MediaQuery.of(context).size.width /
+                          Container(
+                            decoration: BoxDecoration(
+                                border:
+                                    Border.all(width: 0.5, color: Colors.grey)),
+                            width: (MediaQuery.of(context).size.width - 1) /
                                 searchModel.rows,
-                            height: MediaQuery.of(context).size.width /
+                            height: (MediaQuery.of(context).size.width - 1) /
                                 searchModel.column,
                             child: containerItem(spot),
                           ),
