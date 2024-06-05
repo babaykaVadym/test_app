@@ -115,7 +115,7 @@ class _ProcessScreenState extends State<ProcessScreen> with ScreenUtils {
                             );
                           }
                         },
-                        label: 'Start counting process',
+                        label: 'Send results to server',
                       ),
                     ),
                 ],
