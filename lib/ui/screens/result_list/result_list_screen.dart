@@ -25,6 +25,7 @@ class ResultListScreen extends StatelessWidget {
         ),
         title: const Text(
           'Result list screen',
+          //
           style: TextStyle(color: AppColors.white),
         ),
         centerTitle: false,

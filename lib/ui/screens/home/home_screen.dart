@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:geocoder_buddy/geocoder_buddy.dart';
 import 'package:webspark/ui/components/outlined_custom_button.dart';
 import 'package:webspark/ui/screens/home/cubit/home_cubit.dart';
 import 'package:webspark/ui/screens/process/process_screen.dart';
@@ -18,6 +19,11 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> with ScreenUtils {
   final _urlController = TextEditingController();
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+
+  vvod() async {
+    GBLatLng position = GBLatLng(lat: 122, lng: 21);
+    GBData data = await GeocoderBuddy.findDetails(position);
+  }
 
   @override
   Widget build(BuildContext context) {
