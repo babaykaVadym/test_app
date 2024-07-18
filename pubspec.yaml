@@ -13,7 +13,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-
+  geocoder_buddy: ^1.0.1
   cupertino_icons: ^1.0.6
   dio:
   flutter_bloc:
