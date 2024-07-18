@@ -6,6 +6,7 @@ mixin ScreenUtils {
     if (enable && !ProgressLoader().isLoading) {
       await ProgressLoader().show(context);
     } else if (!enable && ProgressLoader().isLoading) {
+      //
       await ProgressLoader().dismiss();
     }
   }
